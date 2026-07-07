@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 보안회의록 (Secure Meeting Minutes)
 
-## Getting Started
+보안 및 접근 제어 기능이 내재된 AI 기반 회의록 자동화 웹 플랫폼 프론트엔드입니다.
 
-First, run the development server:
+## 기술 스택
+
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS v4 + shadcn/ui 스타일 컴포넌트
+- **Icons:** Lucide React
+- **Charts:** Recharts (2단계 이후)
+
+## 시작하기
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+http://localhost:3000 에서 확인할 수 있습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 현재 구현 상태 (1단계)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [x] 프로젝트 초기화
+- [x] 공통 레이아웃 (다크 사이드바 + 상단 헤더)
+- [x] 네비게이션 메뉴 (7개 라우트)
+- [x] 더미 사용자 프로필 (김철수 / 보안 관리자)
+- [ ] 대시보드 메인 UI (2단계)
+- [ ] 회의록 상세 페이지 (4단계)
 
-## Learn More
+## 프로젝트 구조
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/(dashboard)/     # 레이아웃이 적용된 페이지들
+├── components/
+│   ├── layout/          # Sidebar, Header, PageSkeleton
+│   └── ui/              # shadcn/ui 컴포넌트
+├── context/             # 전역 상태 (현재 사용자)
+├── lib/                 # 유틸, 상수
+├── mocks/               # 더미 데이터
+└── types/               # TypeScript 타입
+```

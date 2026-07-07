@@ -1,0 +1,10 @@
+{
+  "currentUser": {
+    "id": "user-001",
+    "name": "김철수",
+    "email": "cheolsu.kim@company.com",
+    "role": "보안 관리자",
+    "rbacLevel": 3,
+    "avatarInitials": "김"
+  }
+}
