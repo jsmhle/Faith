@@ -1,13 +1,33 @@
-import { LayoutDashboard } from "lucide-react";
-
-import { PageSkeleton } from "@/components/layout/page-skeleton";
+import { AudioUploadZone } from "@/components/dashboard/audio-upload-zone";
+import { RecentMeetingsTable } from "@/components/dashboard/recent-meetings-table";
+import { SecurityStatusPanel } from "@/components/dashboard/security-status-panel";
+import { StatCards } from "@/components/dashboard/stat-cards";
+import { PageContainer } from "@/components/layout/page-container";
+import {
+  getDashboardStats,
+  getRecentMeetings,
+  getSecurityMetrics,
+} from "@/lib/mock-loader";
 
 export default function DashboardPage() {
+  const stats = getDashboardStats();
+  const meetings = getRecentMeetings();
+  const securityMetrics = getSecurityMetrics();
+
   return (
-    <PageSkeleton
-      title="대시보드"
-      description="통계 카드, 오디오 업로드, 보안 현황 패널, 최근 회의 목록이 이 영역에 표시됩니다."
-      icon={LayoutDashboard}
-    />
+    <PageContainer className="space-y-6">
+      <StatCards stats={stats} />
+
+      <div className="grid gap-6 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <AudioUploadZone />
+        </div>
+        <div className="lg:col-span-1">
+          <SecurityStatusPanel data={securityMetrics} />
+        </div>
+      </div>
+
+      <RecentMeetingsTable meetings={meetings} />
+    </PageContainer>
   );
 }
