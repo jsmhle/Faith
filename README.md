@@ -20,12 +20,12 @@ http://localhost:3000 에서 확인할 수 있습니다.
 
 ### 포트 충돌 (`EADDRINUSE: 3000`) 발생 시
 
-이전에 실행한 dev 서버가 아직 켜져 있을 때 발생합니다.
-
 ```bash
 npm run dev:stop   # 기존 서버 종료
-npm run dev          # 다시 시작
+npm run dev        # 다시 시작
 ```
+
+`npm run dev`는 시작 전에 기존 서버를 자동으로 종료합니다.
 
 ## 현재 구현 상태
 
