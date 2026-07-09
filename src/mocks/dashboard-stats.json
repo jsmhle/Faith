@@ -1,0 +1,37 @@
+{
+  "stats": [
+    {
+      "id": "total-meetings",
+      "label": "총 회의",
+      "value": "247",
+      "trend": 12,
+      "trendLabel": "지난달 대비",
+      "sparkline": [40, 55, 45, 60, 50, 70, 65, 80, 75, 90, 85, 95]
+    },
+    {
+      "id": "masking-rate",
+      "label": "개인정보 마스킹률",
+      "value": "98.7%",
+      "trend": 2.1,
+      "trendLabel": "지난달 대비",
+      "sparkline": [92, 93, 94, 95, 96, 96.5, 97, 97.5, 98, 98.2, 98.5, 98.7]
+    },
+    {
+      "id": "action-items",
+      "label": "총 액션 아이템",
+      "value": "1,842",
+      "trend": 8.4,
+      "trendLabel": "지난달 대비",
+      "sparkline": [120, 140, 130, 155, 150, 170, 165, 180, 175, 190, 185, 200]
+    },
+    {
+      "id": "security-alerts",
+      "label": "보안 알림",
+      "value": "3",
+      "trend": -25,
+      "trendLabel": "지난주 대비",
+      "sparkline": [8, 6, 7, 5, 6, 4, 5, 3, 4, 3, 2, 3],
+      "variant": "alert"
+    }
+  ]
+}

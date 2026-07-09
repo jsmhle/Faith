@@ -1,0 +1,73 @@
+{
+  "meetings": [
+    {
+      "id": "mtg-001",
+      "title": "Q3 보안 정책 검토",
+      "subtitle": "Project Sync-up",
+      "date": "2026-07-06T14:00:00",
+      "duration": "1시간 20분",
+      "participants": [
+        { "id": "p1", "name": "김철수", "initials": "김", "color": "bg-blue-500" },
+        { "id": "p2", "name": "이영희", "initials": "이", "color": "bg-emerald-500" },
+        { "id": "p3", "name": "박민수", "initials": "박", "color": "bg-violet-500" },
+        { "id": "p4", "name": "최지원", "initials": "최", "color": "bg-amber-500" }
+      ],
+      "status": "completed",
+      "security": "protected"
+    },
+    {
+      "id": "mtg-002",
+      "title": "개인정보 마스킹 파이프라인 점검",
+      "subtitle": "Security Review",
+      "date": "2026-07-05T10:30:00",
+      "duration": "45분",
+      "participants": [
+        { "id": "p1", "name": "김철수", "initials": "김", "color": "bg-blue-500" },
+        { "id": "p5", "name": "정하늘", "initials": "정", "color": "bg-rose-500" }
+      ],
+      "status": "completed",
+      "security": "protected"
+    },
+    {
+      "id": "mtg-003",
+      "title": "RBAC 권한 체계 개편 회의",
+      "subtitle": "Access Control",
+      "date": "2026-07-04T15:00:00",
+      "duration": "2시간",
+      "participants": [
+        { "id": "p2", "name": "이영희", "initials": "이", "color": "bg-emerald-500" },
+        { "id": "p3", "name": "박민수", "initials": "박", "color": "bg-violet-500" },
+        { "id": "p6", "name": "한서연", "initials": "한", "color": "bg-cyan-500" }
+      ],
+      "status": "in_progress",
+      "security": "protected"
+    },
+    {
+      "id": "mtg-004",
+      "title": "주간 팀 스탠드업",
+      "subtitle": "Weekly Standup",
+      "date": "2026-07-03T09:00:00",
+      "duration": "30분",
+      "participants": [
+        { "id": "p1", "name": "김철수", "initials": "김", "color": "bg-blue-500" },
+        { "id": "p2", "name": "이영희", "initials": "이", "color": "bg-emerald-500" },
+        { "id": "p3", "name": "박민수", "initials": "박", "color": "bg-violet-500" }
+      ],
+      "status": "completed",
+      "security": "protected"
+    },
+    {
+      "id": "mtg-005",
+      "title": "STT 엔진 성능 벤치마크",
+      "subtitle": "Tech Evaluation",
+      "date": "2026-07-02T13:30:00",
+      "duration": "1시간 10분",
+      "participants": [
+        { "id": "p4", "name": "최지원", "initials": "최", "color": "bg-amber-500" },
+        { "id": "p5", "name": "정하늘", "initials": "정", "color": "bg-rose-500" }
+      ],
+      "status": "completed",
+      "security": "protected"
+    }
+  ]
+}
