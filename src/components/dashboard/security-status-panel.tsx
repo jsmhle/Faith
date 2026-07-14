@@ -12,11 +12,11 @@ export function SecurityStatusPanel({ data }: SecurityStatusPanelProps) {
   const maxActivity = Math.max(...data.dailyActivity.map((d) => d.value));
 
   return (
-    <Card className="h-full border-slate-700 bg-[#0f172a] text-slate-200">
+    <Card className="h-full border-gray-200 bg-white">
       <CardHeader className="pb-4">
         <div className="flex items-center gap-2">
-          <Shield className="h-5 w-5 text-blue-400" />
-          <CardTitle className="text-white">보안 및 접근 제어 현황</CardTitle>
+          <Shield className="h-5 w-5 text-blue-600" />
+          <CardTitle className="text-gray-900">보안 및 접근 제어 현황</CardTitle>
         </div>
       </CardHeader>
       <CardContent className="space-y-5">
@@ -24,10 +24,16 @@ export function SecurityStatusPanel({ data }: SecurityStatusPanelProps) {
           {data.metrics.map((metric) => (
             <div key={metric.id} className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span className="text-slate-300">{metric.label}</span>
-                <span className="font-semibold text-white">{metric.value}%</span>
+                <span className="text-gray-500">{metric.label}</span>
+                <span className="font-semibold text-gray-900">
+                  {metric.value}%
+                </span>
               </div>
-              <Progress value={metric.value} />
+              <Progress
+                value={metric.value}
+                className="bg-gray-100"
+                indicatorClassName="bg-blue-500"
+              />
             </div>
           ))}
         </div>
@@ -36,10 +42,10 @@ export function SecurityStatusPanel({ data }: SecurityStatusPanelProps) {
           {data.infoBoxes.map((box) => (
             <div
               key={box.id}
-              className="rounded-lg bg-slate-800/80 px-3 py-3"
+              className="rounded-lg border border-gray-100 bg-gray-50 px-3 py-3"
             >
-              <p className="text-xs text-slate-400">{box.label}</p>
-              <p className="mt-1 text-lg font-semibold text-white">
+              <p className="text-xs text-gray-400">{box.label}</p>
+              <p className="mt-1 text-lg font-semibold text-gray-900">
                 {box.value}
               </p>
             </div>
@@ -47,7 +53,7 @@ export function SecurityStatusPanel({ data }: SecurityStatusPanelProps) {
         </div>
 
         <div>
-          <p className="mb-3 text-xs font-medium text-slate-400">
+          <p className="mb-3 text-xs font-medium text-gray-400">
             일별 보안 활동
           </p>
           <div className="flex h-20 items-end justify-between gap-2">
@@ -57,13 +63,13 @@ export function SecurityStatusPanel({ data }: SecurityStatusPanelProps) {
                 className="flex flex-1 flex-col items-center gap-1"
               >
                 <div
-                  className="w-full rounded-t bg-blue-500/80"
+                  className="w-full rounded-t bg-blue-400/70"
                   style={{
                     height: `${(day.value / maxActivity) * 100}%`,
                     minHeight: "8px",
                   }}
                 />
-                <span className="text-[10px] text-slate-500">{day.day}</span>
+                <span className="text-[10px] text-gray-400">{day.day}</span>
               </div>
             ))}
           </div>

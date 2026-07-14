@@ -14,11 +14,12 @@ export function RecordingButton() {
     <div className="space-y-2">
       <Button
         onClick={toggleRecording}
+        variant="outline"
         className={cn(
-          "h-12 w-full text-base font-semibold",
+          "h-12 w-full border-gray-200 text-base font-semibold",
           isRecording
-            ? "bg-red-700 hover:bg-red-800"
-            : "bg-red-600 hover:bg-red-700",
+            ? "border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 hover:text-rose-800"
+            : "bg-white text-gray-700 hover:bg-gray-50 hover:text-gray-900",
         )}
       >
         {isRecording ? (
@@ -28,17 +29,17 @@ export function RecordingButton() {
           </>
         ) : (
           <>
-            <Mic className="h-4 w-4" />
+            <Mic className="h-4 w-4 text-gray-500" />
             실시간 녹음 시작
           </>
         )}
       </Button>
 
       {status !== "idle" && (
-        <div className="flex items-center justify-between rounded-lg bg-slate-100 px-4 py-2 text-sm">
-          <span className="text-slate-600">
+        <div className="flex items-center justify-between rounded-lg bg-gray-50 px-4 py-2 text-sm">
+          <span className="text-gray-500">
             상태:{" "}
-            <span className="font-medium text-slate-900">
+            <span className="font-medium text-gray-900">
               {status === "recording"
                 ? "녹음 중"
                 : status === "stopped"
@@ -56,8 +57,8 @@ export function RecordingButton() {
             </button>
           )}
           {isRecording && (
-            <span className="flex items-center gap-1.5 text-red-600">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
+            <span className="flex items-center gap-1.5 text-rose-600">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-rose-400" />
               REC
             </span>
           )}

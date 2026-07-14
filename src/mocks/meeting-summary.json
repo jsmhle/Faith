@@ -1,0 +1,77 @@
+{
+  "meetingId": "mtg-001",
+  "topics": [
+    "Q3 보안 정책 및 마스킹 파이프라인 점검",
+    "RBAC Level별 액션 아이템 접근 제어",
+    "암호화율 100% 유지 및 키 로테이션 주기"
+  ],
+  "actionItems": [
+    {
+      "id": "ai-1",
+      "text": "마스킹 정책 문서 업데이트",
+      "assignee": "김철수",
+      "done": false,
+      "requiredRbacLevel": 2
+    },
+    {
+      "id": "ai-2",
+      "text": "STT 지연 구간 성능 개선안 작성",
+      "assignee": "이영희",
+      "done": false,
+      "requiredRbacLevel": 2
+    },
+    {
+      "id": "ai-3",
+      "text": "고객 계좌·연락처 마스킹 검증 보고서 작성",
+      "assignee": "박민수",
+      "done": false,
+      "requiredRbacLevel": 4
+    },
+    {
+      "id": "ai-4",
+      "text": "Level 4 전용 액션 아이템 분리 작업",
+      "assignee": "김철수",
+      "done": true,
+      "requiredRbacLevel": 3
+    },
+    {
+      "id": "ai-5",
+      "text": "외부 감사 대응용 원본 스크립트 열람 권한 검토",
+      "assignee": "이영희",
+      "done": false,
+      "requiredRbacLevel": 4
+    }
+  ],
+  "segmentSummaries": [
+    {
+      "id": "ss-1",
+      "timeRange": "00:00~01:05",
+      "title": "회의 시작 및 마스킹 점검 공유",
+      "points": [
+        "Q3 보안 정책 검토 안건 소개",
+        "고객 개인정보 마스킹 정상 동작 확인",
+        "일부 STT 발화 구간 지연 이슈 제기"
+      ]
+    },
+    {
+      "id": "ss-2",
+      "timeRange": "01:05~02:38",
+      "title": "RBAC·암호화 논의",
+      "points": [
+        "Level 3/4 접근 제어 정책 정리",
+        "민감 액션 아이템 오버레이 적용 합의",
+        "암호화율 100%, 키 로테이션 분기 단위"
+      ]
+    },
+    {
+      "id": "ss-3",
+      "timeRange": "02:38~03:34",
+      "title": "다음 할 일 정리",
+      "points": [
+        "마스킹 정책 문서 업데이트",
+        "Level 4 전용 항목 분리",
+        "담당자별 액션 아이템 공유 예정"
+      ]
+    }
+  ]
+}

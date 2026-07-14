@@ -1,0 +1,95 @@
+{
+  "meetingId": "mtg-001",
+  "keywords": ["보안정책", "RBAC", "마스킹", "암호화", "감사로그"],
+  "durationSeconds": 214,
+  "speakers": [
+    {
+      "id": "sp-1",
+      "name": "김철수",
+      "role": "보안 관리자",
+      "icon": "representative",
+      "color": "bg-amber-100 text-amber-700"
+    },
+    {
+      "id": "sp-2",
+      "name": "이영희",
+      "role": "개발 리드",
+      "icon": "user",
+      "color": "bg-sky-100 text-sky-700"
+    },
+    {
+      "id": "sp-3",
+      "name": "박민수",
+      "role": "컴플라이언스",
+      "icon": "guest",
+      "color": "bg-emerald-100 text-emerald-700"
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg-1",
+      "speakerId": "sp-1",
+      "timestamp": "00:00",
+      "content": [
+        { "type": "text", "value": "안녕하세요. 오늘은 Q3 " },
+        { "type": "highlight", "value": "보안 정책 검토" },
+        { "type": "text", "value": "를 진행하겠습니다. 먼저 지난주 마스킹 파이프라인 점검 결과부터 공유드릴게요." }
+      ]
+    },
+    {
+      "id": "seg-2",
+      "speakerId": "sp-2",
+      "timestamp": "00:28",
+      "content": [
+        { "type": "text", "value": "네. STT 결과에서 고객 " },
+        { "type": "masked", "label": "개인정보 마스킹" },
+        { "type": "text", "value": " 과 연락처가 정상적으로 가려지는 것을 확인했습니다. 다만 일부 발화에서 지연이 있어요." }
+      ],
+      "bookmark": true
+    },
+    {
+      "id": "seg-3",
+      "speakerId": "sp-3",
+      "timestamp": "01:05",
+      "content": [
+        { "type": "text", "value": "감사 로그 쪽도 같이 봐야 합니다. 현재 RBAC Level 3 사용자는 액션 아이템 일부에 접근이 제한되어야 하고, Level 4 이상은 전체 열람이 가능해야 합니다." }
+      ]
+    },
+    {
+      "id": "seg-4",
+      "speakerId": "sp-1",
+      "timestamp": "01:42",
+      "content": [
+        { "type": "text", "value": "동의합니다. 특히 고객 " },
+        { "type": "masked", "label": "개인정보 마스킹" },
+        { "type": "text", "value": " 관련 액션 아이템은 Level 4 이상만 볼 수 있게 오버레이를 적용합시다." }
+      ]
+    },
+    {
+      "id": "seg-5",
+      "speakerId": "sp-2",
+      "timestamp": "02:10",
+      "content": [
+        { "type": "text", "value": "암호화율은 현재 100%입니다. 파일 업로드 시점부터 AES-256이 적용되고, 키 로테이션은 분기 단위로 돌리고 있어요." }
+      ]
+    },
+    {
+      "id": "seg-6",
+      "speakerId": "sp-3",
+      "timestamp": "02:38",
+      "content": [
+        { "type": "text", "value": "다음 할 일로 " },
+        { "type": "highlight", "value": "마스킹 정책 문서 업데이트" },
+        { "type": "text", "value": "와 Level 4 전용 액션 아이템 분리 작업을 잡으면 좋겠습니다." }
+      ]
+    },
+    {
+      "id": "seg-7",
+      "speakerId": "sp-1",
+      "timestamp": "03:05",
+      "content": [
+        { "type": "text", "value": "좋습니다. 오늘은 여기까지 하고, 내일 오전 중으로 담당자별 액션 아이템을 정리해서 공유하겠습니다." }
+      ]
+    }
+  ]
+}
