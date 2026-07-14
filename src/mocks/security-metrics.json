@@ -1,0 +1,22 @@
+{
+  "metrics": [
+    { "id": "privacy-masking", "label": "Privacy Masking", "value": 98.7 },
+    { "id": "encryption", "label": "Encryption Rate", "value": 100 },
+    { "id": "rbac-compliance", "label": "RBAC Compliance", "value": 94.2 }
+  ],
+  "infoBoxes": [
+    { "id": "user-level", "label": "현재 사용자 레벨", "value": "Level 3" },
+    { "id": "masking-count", "label": "총 마스킹 건수", "value": "12,847" },
+    { "id": "total-alerts", "label": "총 알림", "value": "3" },
+    { "id": "encrypted-files", "label": "암호화 파일", "value": "247" }
+  ],
+  "dailyActivity": [
+    { "day": "월", "value": 42 },
+    { "day": "화", "value": 58 },
+    { "day": "수", "value": 45 },
+    { "day": "목", "value": 72 },
+    { "day": "금", "value": 65 },
+    { "day": "토", "value": 28 },
+    { "day": "일", "value": 35 }
+  ]
+}
