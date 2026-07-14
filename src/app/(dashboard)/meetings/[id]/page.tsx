@@ -1,7 +1,3 @@
-import { FileText } from "lucide-react";
-
-import { PageContainer } from "@/components/layout/page-container";
-
 export default async function MeetingDetailPage({
   params,
 }: {
@@ -10,20 +6,15 @@ export default async function MeetingDetailPage({
   const { id } = await params;
 
   return (
-    <PageContainer>
-      <div className="mx-auto flex max-w-3xl flex-col items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-white px-8 py-16 text-center shadow-sm">
-        <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
-          <FileText className="h-7 w-7" />
-        </div>
-        <h2 className="text-lg font-semibold text-slate-900">회의록 상세</h2>
-        <p className="mt-2 text-sm text-slate-500">
-          회의 ID: <span className="font-mono text-slate-700">{id}</span>
-        </p>
-        <p className="mt-4 max-w-md text-sm leading-6 text-slate-500">
-          마스킹 스크립트, AI 요약, 액션 아이템, RBAC UI는 4단계에서
-          구현됩니다.
-        </p>
-      </div>
-    </PageContainer>
+    <div className="flex flex-1 flex-col items-center justify-center bg-white px-8 py-16 text-center">
+      <p className="text-sm font-medium text-gray-400">회의 ID: {id}</p>
+      <h2 className="mt-2 text-lg font-semibold text-gray-900">
+        클로바노트 스타일 회의록 상세
+      </h2>
+      <p className="mt-3 max-w-md text-sm leading-6 text-gray-500">
+        라이트 테마 전환이 완료되었습니다. 아래 컴포넌트 구조 승인 후 본문
+        UI(음성 기록, 요약 아코디언, 플레이어, 마스킹/RBAC)를 구현합니다.
+      </p>
+    </div>
   );
 }

@@ -22,19 +22,19 @@ export function AppSidebar() {
   };
 
   return (
-    <aside className="flex h-screen w-64 shrink-0 flex-col bg-[#0f172a] text-slate-200">
-      <div className="flex h-16 items-center gap-3 border-b border-slate-700/60 px-6">
-        <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600">
-          <Shield className="h-5 w-5 text-white" />
+    <aside className="flex h-screen w-60 shrink-0 flex-col border-r border-[#e5e7eb] bg-white">
+      <div className="flex h-14 items-center gap-3 border-b border-[#e5e7eb] px-5">
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
+          <Shield className="h-4 w-4 text-white" />
         </div>
         <div>
-          <p className="text-sm font-semibold text-white">{APP_NAME}</p>
-          <p className="text-xs text-slate-400">Secure Minutes</p>
+          <p className="text-sm font-semibold text-gray-900">{APP_NAME}</p>
+          <p className="text-[11px] text-gray-400">Secure Minutes</p>
         </div>
       </div>
 
-      <ScrollArea className="flex-1 px-3 py-4">
-        <nav className="space-y-1">
+      <ScrollArea className="flex-1 px-3 py-3">
+        <nav className="space-y-0.5">
           {NAV_ITEMS.map((item) => {
             const Icon = item.icon;
             const active = isActive(item.href);
@@ -44,20 +44,25 @@ export function AppSidebar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
+                  "flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                   active
-                    ? "bg-blue-600 text-white"
-                    : "text-slate-300 hover:bg-slate-800 hover:text-white",
+                    ? "bg-blue-50 text-blue-600"
+                    : "text-gray-600 hover:bg-gray-50 hover:text-gray-900",
                 )}
               >
-                <Icon className="h-4 w-4 shrink-0" />
+                <Icon
+                  className={cn(
+                    "h-4 w-4 shrink-0",
+                    active ? "text-blue-600" : "text-gray-400",
+                  )}
+                />
                 <span className="flex-1">{item.title}</span>
                 {"badge" in item && item.badge ? (
                   <Badge
                     variant="sidebar"
                     className={cn(
-                      "min-w-6 justify-center px-1.5",
-                      active && "bg-white/20 text-white",
+                      "min-w-5 justify-center px-1.5 py-0 text-[10px]",
+                      active && "bg-blue-100 text-blue-600",
                     )}
                   >
                     {item.badge}
@@ -69,7 +74,7 @@ export function AppSidebar() {
         </nav>
       </ScrollArea>
 
-      <div className="border-t border-slate-700/60 p-4">
+      <div className="border-t border-[#e5e7eb] p-3">
         <UserProfile />
       </div>
     </aside>
